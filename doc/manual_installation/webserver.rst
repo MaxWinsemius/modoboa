@@ -94,10 +94,16 @@ gunicorn configuration (create a new file named
   logfile = "/var/log/gunicorn/modoboa.log"
   loglevel = "info"
 
-To start gunicorn, execute the following commands::
+Do not forget to create the ``/var/run/gunicorn/`` and ``/var/log/gunicorn/``
+folders. To start gunicorn, execute the following commands::
 
   $ cd <modoboa dir>
   $ gunicorn -c gunicorn.conf.py <modoboa dir>.wsgi:application
+
+.. note::
+
+   If you need to debug gunicorn, an easy way to get logs is setting
+   ``daemon`` to ``False``, such that ``gunicorn`` runs in the foreground.
 
 Now the nginx part. Just create a new virtual host and use the
 following configuration::
