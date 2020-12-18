@@ -153,6 +153,11 @@ you just have to run the following command:
 
 .. note::
 
+   Make sure that the location where you create the instance is accessable for
+   your webserver. The recommended location is ``/srv/modoboa``.
+
+.. note::
+
    You can install additional extensions during the deploy process. To
    do so, use the ``--extensions`` option which accepts a list of
    names as argument (``--extensions ext1 ext2 ...``). If you want to
