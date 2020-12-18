@@ -258,7 +258,7 @@ But we recommend an automatic start using ``systemd`` or
    [program:policyd]
    autostart=true
    autorestart=true
-   command=/srv/modoboa/env/bin/python /srv/modoboa/instance/manage.py policy_daemon
+   command=/usr/bin/env python /srv/modoboa/instance/manage.py policy_daemon
    directory=/srv/modoboa
    redirect_stderr=true
    user=modoboa
